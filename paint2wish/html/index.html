@@ -1,0 +1,90 @@
+<html lang="fr">
+<head>
+    <meta name = "author " content = "Abdramane, Alex, jason, Accène,Brian,Saddam">
+    <meta charset="UTF-8">
+    <meta name = "description" content = "dessin, peinture, forme, créativité">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lang="fr"> Paint2wish </title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/javascript/script.js"></script>
+</head>
+<body>
+<!-- la page -->
+    <div class="page">
+        <!-- barre de button -->
+        <div class="toolbar">
+            <a  href="#" id = "save" onclick="SaveImage()"><button> Save </button></a> <!-- save dans le default dowload directory -->
+            <a  href="#" id = "reset" onclick="ResetImage()"><button> Reset All </button></a> <!-- clear la page -->
+           
+        </div>
+        <!-- de la decoration -->
+        <div class = "deco">
+            <decora>
+                <p>
+                   abde saddam accene alex brian jason
+                </p>
+            </deco>
+        </div>
+        <!-- header-->
+        <header>
+            <h1>
+                Paint2wish
+            </h1>
+        </header>
+        <!-- canvas-->
+        <canvas id="my-canvas" width="1200" height="600"></canvas>
+        <!-- outils et palettes de couleurs-->
+        <table>
+            <tr >
+                <td>
+                    <a  href="#" id = "brush" onclick="ChangeTool('brush')"<td>------------- <i class="las la-paint-brush"></i> ---------</td></a> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a  href="#" id = "triangle" onclick="ChangeTool('triangle')"<td>-------------<i class="las la-caret-up"></i> ---------- </td></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a  href="#" id = "texte" onclick="Write('texte')"<td> ------------- <i class="fa-thin fa-t"></i> -----------</td></a> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a  href="#" id = "cercle" onclick="ChangeTool('cercle')"<td> -------------<i class="las la-circle"></i> ----------</td></a>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <a  href="#" id = "line" onclick="ChangeTool('line')" <td> ------------ <i class="las la-minus"></i> ----------</td> </a>
+                </td>
+            </tr>
+            <tr>
+                <td> 
+                    <a  href="#" id = "carré" onclick="ChangeTool('carré')"<td> -------------<i class="las la-stop">--------</i> </td></a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input  type="color" id="color-primaire"  value="#3C91E6" onchange="changecolor()">
+                    <input  type="color" id="color-secondaire" value="#E71D36" onchange="changecolor2()">
+            </tr>
+            <tr>
+                <td>
+                   Contours:<input type= "range" id="taille" min="1" max="100" value="5" onchange="changetaille()"/>    
+                </td>
+            </tr>
+                
+            <!-- partie bouton pdf et png-->
+        <div id ="img-data-div">
+            <a href="#" id = "img-file" download="image.png" <img src="/img/add-image.png"><button> Export.img </button></a>
+            <a href="#" id = "pdf-file" download="document.pdf" <img src="/img/pdf.png"><button> Export.pdf </button></a>
+        </div>
+    </div>
+    
+</body>
+</html>

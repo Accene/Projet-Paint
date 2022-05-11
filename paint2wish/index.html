@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name = "author " content = "Abdramane, Alex, jason, Accène,Brian,Saddam">
+    <meta charset="UTF-8">
+    <meta name = "description" content = "dessin, peinture, forme, créativité">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title lang="fr">Paint2Wish</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/javascript/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css" integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="top-page">
+        <!-- barre de navigation pour les options -->
+        <nav>
+        <!-- div qui permettra de stocker nos options-->
+            <div class="option">
+                <a class="selected" href="#" id = "reset" onclick="openNewSheet()"> reset all </a>
+                <a  href="#" id = "img-file" download="image.png"> Export image </a> <!--save image data-->
+                <a  href="#" id = "exportPdf" onclick="ExportImagepdf()"> Export pdf </a>
+                <a  href="#" id = "save" onclick="save()"> save </a> <!-- save-->
+                <a  href="#" id = "reload" onclick="reload()"> reload </a> <!-- open-->
+            </divr>
+             <!-- button disconnect -->
+            <div class = buttons>
+                <button class="disconnect">disconnect</button>
+            </div>
+        </nav>
+          <!-- fin de la barre de navigation-->
+          <!-- header avec le titre -->
+        <header>
+            <h1>
+                Paint2wish
+            </h1>
+        </header>
+    </section>
+
+    <section id = dessin >
+        <canvas id=" feuille " width=" 1200" height="600"></canvas>
+
+        <!-- outils et palettes-->
+        <div class = "outils-palettes">
+            <table>
+                <tr >
+                    <td href="#" id = "triangle" onclick="changeTool('triangle')"> 
+                        <i class="las la-caret-up"></i>
+                    </td>
+                    <td href="#" id = "carré" onclick="changeTool('carré')"> 
+                        <i class="las la-stop"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td href="#" id = "cercle" onclick="changeTool('cercle')"> 
+                        <i class="las la-circle"></i>
+                    </td>
+                    <td href="#" id = "ligne" onclick="changeTool('ligne')"> 
+                        <i class="las la-minus"></i> 
+                    </td>
+
+                </tr>
+                <tr>
+                    <td href="#" id = "peinture" onclick="changeTool('peinture')"> 
+                        <i class="las la-fill-drip"></i>
+                    </td>
+                    <td ref="#" id = "texte" onclick="changeTool('texte')"> 
+                        <i class="fa-thin fa-t"></i> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                    <td> 
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                    <td>
+                        <input id="primaryColor" type="color" name="primarycolor" value="#09091B">
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </section>
+</body>
+</html>

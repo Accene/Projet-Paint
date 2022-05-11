@@ -1,0 +1,113 @@
+
+/* stylisée la police et la base de la page */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300;1,500;1,700&display=swap');
+body{
+    font-family: 'Ubuntu', 'sans-serif';
+    background-color: gray;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+/* stylisée plus en profondeur la page */
+body .top-page{
+    margin: 20px 30px;
+}
+/*  barre  de navigation pour les options */
+nav{
+    /* alignée les elements  */
+    display: flex;
+    /*  passer a la ligne si la resolution de l'ecran est trop petit */ 
+    flex-wrap: wrap;
+    /* faire en sorte que la barre de navigation reste statique en haut 
+    de la page quand on scroll*/ 
+    position: sticky;
+    top: 0;
+    /* mettre la meme coleur que le fond*/
+    background-color: gray;
+    /* marge interieur */ 
+    padding: 10px 0px;
+
+} 
+nav .option{
+    display: flex;
+    flex-wrap: wrap;
+    /* marge exterieur */
+    margin-top: 5px;
+}
+nav .option a{
+    /* mettre un marge entre chaque options*/
+    margin-right: 189px;
+    /*  transformer le curseur en pointeur */
+    cursor: pointer;
+}
+/* button */
+nav .buttons button{
+     display: flex;
+     flex-wrap: wrap;
+     /* taille du boutton */
+     padding: 5px 10px;
+     /*couleur de la police */
+     color: white;
+     /* bordure */
+     border: none;
+     /*  taille de la police */
+     font-size: 18px;
+     cursor: pointer;
+     /* enlever la bordure lors du clique */
+     outline: none;
+     /* marge exterieur*/
+     margin: 0px 0px;
+
+}
+/* header */ 
+header{
+    color: white;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 623px;
+}
+/* section dessin */
+dessin{
+    display: flex;
+}
+
+/* stylisation du canva  */
+canvas{
+    border: 1.5px solid black;
+    background-color: white;
+    margin:0px 215px;
+    flex-wrap: wrap;
+ }
+ /* stylisation du  tableau */ 
+ outils-palletes.table{
+     border-collapse: collapse;
+ }
+td{
+     border: 3px solid black;
+     padding: 10px;
+ }
+ table{
+     margin: -600px 0px;
+     cursor: pointer;
+ }
+
+
+ /* pour s'adapter en responsive */
+ @media screen and (max-width: 640px){
+    body .top-page{
+        margin: 0px;
+
+    }
+    header{
+        margin-top: 10px;
+    }
+    header h1{
+        font-size: 10px;
+        padding: 0px;
+    }
+    canvas{
+        width:494px ;
+        height: 670px; ;
+    }
+}

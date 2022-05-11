@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300;1,500;1,700&display=swap');
+/* les reglages de base de la page */ 
+body{
+    font-family: 'Ubuntu', 'sans-serif';
+    background-color: grey;
+    padding: 0;
+    margin: 0;
+    color: white;
+    border: 1.5px solid grey;
+}
+.page{
+    max-width: 1200px;
+    margin: 10px;
+}
+/* stylisation des boutons */
+.page button{
+    padding: 10px 30px;
+    margin: 5px 0px;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+/* le haut de la page */
+.toolbar{
+    width: 100%;
+    background-color: gray;
+    overflow: auto;
+    
+}
+;.toolbar a{
+    float: left;
+    width: 11%;
+    text-align: center;
+    padding: 6px 50px;
+    
+
+}
+
+.toolbar a:hover{
+    background-color: gray;
+}
+
+.selected{
+    background-color: gray;
+    padding: 0px 0px;
+
+/* fin */
+
+}
+/*  decoration */ 
+p{
+    background-color: white;
+    width: 1420px;
+}
+/* stylisation tableau */
+td{
+    border: 3px solid black;
+    padding: 10px;
+    text-decoration: none;
+}
+table{
+    margin: -1205px 1250px;
+    cursor: pointer;
+}
+
+
+/* stylisation du header */
+header{
+    color:  white;
+    font-size: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px 620px;
+}
+/* stylisation du canvas */ 
+canvas{
+    border: 1.5px solid black;
+    background-color: white;
+ }
+
+#my-canvas{
+    width: 102%;
+    border: 3px solid black;
+}
+/* gestion des attibuts de l'image pour l'enregistrement*/
+#img-data-div{
+    width: 100%;
+    max-width: 1200px;
+    height: 600px;
+}
+.toolbar a img{
+    max-width: 100%;
+    height: auto;
+}
+
+ /* pour s'adapter en responsive */
+ @media screen and (max-width: 670px){
+    body .page{
+        margin: 0px;
+
+    }
+    header{
+        margin-top: 10px;
+    }
+    header h1{
+        font-size: 10px;
+        padding: 0px;
+    }
+    canvas{
+        width: 397px ;
+        height: 670px; ;
+    }
+}
